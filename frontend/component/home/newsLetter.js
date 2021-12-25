@@ -112,7 +112,7 @@ const NewsLatter = ({ setSnackBarMessage, setSnackBarColor, setShowSnackBar }) =
 
     const handlePostData = () => {
         setIsPost(true)
-        axios.post(process.env.STRAPI_URL + "post", {
+        axios.post(process.env.STRAPI_URL + "data/post", {
             email: email,
             name: name
         }).then(res => {
