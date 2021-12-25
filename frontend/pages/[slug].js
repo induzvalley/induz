@@ -336,7 +336,7 @@ export const getStaticPaths  = async () => {
 
 export const getStaticProps = async (context) => {
     const id = context.params.slug
-    const res = await fetch(process.env.STRAPI_URL + `?slug=${id}`)
+    const res = await fetch(process.env.STRAPI_URL + `blogs?slug=${id}`)
     const res2 = await fetch(process.env.STRAPI_URL + 'blogs')
     const data = await res.json()
     const data2 = await res2.json()
