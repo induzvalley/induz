@@ -6,6 +6,6 @@ module.exports = {
     ignoreDuringBuilds: true,
   },
     Images: {
-      domains: ["https://blogfiver.herokuapp.com"],
+      domains: ["https://induzblog.herokuapp.com"],
     },
 }

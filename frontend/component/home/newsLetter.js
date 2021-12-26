@@ -104,15 +104,10 @@ const NewsLatter = ({ setSnackBarMessage, setSnackBarColor, setShowSnackBar }) =
 
     const matchesMD = useMediaQuery(th => theme.breakpoints.down("md"))
 
-    const handleChange = e => {
-        e.preventDefault()
-
-        setName(e.target.value)
-    }
 
     const handlePostData = () => {
         setIsPost(true)
-        axios.post(process.env.STRAPI_URL + "data/post", {
+        axios.post("https://induzblog.herokuapp.com/data/post", {
             email: email,
             name: name
         }).then(res => {
@@ -153,7 +148,7 @@ const NewsLatter = ({ setSnackBarMessage, setSnackBarColor, setShowSnackBar }) =
 
             <Grid item container direction="column" lg={5} md={12} justifyContent="center" alignItems="center">
                 <Grid item classes={{root: classes.inputContainer}}>
-                    <input className={classes.input}  placeholder="Name"  type="name" value={name} onChange={handleChange}/>
+                    <input className={classes.input}  placeholder="Name"  type="name" value={name} onChange={e => setName(e.target.value)}/>
                 </Grid>
                 <Grid  item classes={{root: clsx ( 
                     [classes.inputContainer, classes.inlineGap]

@@ -67,7 +67,7 @@ const BlogSection = ({ blogData }) => {
                 </Grid>
             <Grid item container justifyContent="center" classes={{root:classes.readmoreBtnContainer}}>
                 <Grid item>
-                    <Link href="/blogs/blog-archive">
+                    <Link href="/blog">
                     <Button>
                         <Typography classes={{root: classes.readMorebtnText}}>
                             Read More {">"}
